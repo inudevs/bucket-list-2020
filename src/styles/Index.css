@@ -1,0 +1,12 @@
+* {
+  font-family: 'Gothic A1', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+h1, h2, p {
+  margin: 0;
+  font-weight: normal;
+}
