@@ -1,0 +1,29 @@
+* {
+  font-family: 'Gothic A1', sans-serif;
+}
+
+h1, h2, p {
+  margin: 0;
+  font-weight: normal;
+}
+
+.header {
+  text-align: center;
+  margin-top: 2rem;
+
+  &-org {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+  }
+
+  &-title {
+    font-family: 'Merriweather', serif;
+    text-transform: uppercase;
+    font-size: 3.8rem;
+  }
+
+  &-desc {
+    margin-top: 0.3rem;
+  }
+}
