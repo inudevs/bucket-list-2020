@@ -38,7 +38,7 @@ const Footer = () => (
       target="_blank"
       rel="noopener noreferrer"
     >
-      버켓리스트 추가하기
+      버킷리스트 추가하기
     </a>
   </footer>
 )
