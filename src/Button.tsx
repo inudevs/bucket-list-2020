@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 
 import useConstant from './utils/useConstant';
 
-export default function Button({ onClick }) {
+interface ButtonProps {
+  children: ReactNode,
+  onClick?: () => void,
+};
+
+const Button: React.SFC<ButtonProps> = ({ children, onClick = () => {} }) => {
   const ButtonContainer = useConstant(() => styled.button`
     border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 25px;
@@ -23,7 +28,9 @@ export default function Button({ onClick }) {
 
   return (
     <ButtonContainer onClick={onClick}>
-      함께 이루어 나가기
+      {children}
     </ButtonContainer>
   );
 }
+
+export default Button;

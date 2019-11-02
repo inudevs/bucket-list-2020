@@ -3,7 +3,13 @@ import styled from 'styled-components';
 
 import useConstant from './utils/useConstant';
 
-export default function Bucket({ name, desc, tags }) {
+interface BucketProps {
+  name?: string,
+  desc?: string,
+  tags?: Array<string>
+};
+
+const Bucket: React.SFC<BucketProps> = ({ name = '', desc = '', tags = [] }) => {
   const BucketContainer = useConstant(() => styled.div`
     flex: 0 0 30%;
     margin-bottom: 1.5rem;
@@ -44,3 +50,5 @@ export default function Bucket({ name, desc, tags }) {
     </BucketContainer>
   );
 }
+
+export default Bucket;

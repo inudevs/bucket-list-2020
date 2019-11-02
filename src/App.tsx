@@ -60,7 +60,9 @@ export default function App() {
             />
           ))}
         </List>
-        <Button onClick={onClickButton} />
+        <Button onClick={onClickButton}>
+          함께 이루어 나가기
+        </Button>
       </Content>
       <Footer />
     </AppContainer>
