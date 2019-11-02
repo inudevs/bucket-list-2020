@@ -1,12 +1,46 @@
 import React from 'react';
-import './styles/Header.scss';
+//import './styles/Header.scss';
+import styled from 'styled-components'; 
 
 const Header = () => (
-  <header className="header">
-    <h2 className="header-org">INU: 이루고, 누리다.</h2>
-    <h1 className="header-title">Bucket List</h1>
-    <p className="header-desc">2020년, 이런 동아리를 만들어 나갈 거예요!</p>
-  </header>
+  <Head>
+    <Org>INU: 이루고, 누리다.</Org>
+    <Title>Bucket List</Title>
+    <Desc>2020년, 이런 동아리를 만들어 나갈 거예요!</Desc>
+  </Head>
 )
+
+
+const Head = styled.div`
+  text-align: center;
+  margin: 2.2rem 0;
+`
+
+const Org = styled.h2`
+  font-size: 1.2rem;
+  font-weight: 700;
+
+  @media (max-width: 550px){
+    font-size: 1.1rem;
+  }
+`
+
+const Title = styled.h1`
+  font-family: 'Merriweather', serif;
+  text-transform: uppercase;
+  font-size: 3.8rem;
+
+  @media (max-width: 550px){
+    font-size: 3rem;
+  }
+
+  @media (max-width: 400px){
+    font-size: 2.2rem;
+  }
+`
+
+const Desc = styled.p`
+margin-top: 0.3rem;
+`
 
 export default Header;
