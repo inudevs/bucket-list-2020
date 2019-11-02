@@ -1,13 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'; 
 
-const Button = ({ onClick }) => (
-  <Btn onClick={onClick}>
-    함께 이루어 나가기
-  </Btn>
-)
-
-const Btn = styled.button`
+const ButtonContainer = styled.button`
   cursor: pointer;
   color: rgba(0, 0, 0, 0.5);
   display: flex;
@@ -23,4 +17,11 @@ const Btn = styled.button`
     outline: none;
   }
 `
+
+const Button = ({ onClick }) => (
+  <ButtonContainer onClick={onClick}>
+    함께 이루어 나가기
+  </ButtonContainer>
+)
+
 export default Button;

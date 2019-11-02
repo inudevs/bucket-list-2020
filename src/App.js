@@ -10,9 +10,41 @@ const onClickButton = () => {
   window.alert('준비중입니다.');
 };
 
-function App() {
-  return (
-    <AppContainer>
+export default function AppComponent(){
+  function App(){
+    const AppContainer = styled.div`
+      display: flex;
+      flex-direction: column;
+    `
+  
+    const Content = styled.div`
+      margin: auto;
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    
+      @media (max-width: 400px) {
+        width: 90%;
+      }
+    `
+    
+    const List = styled.div`
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    
+      @media (max-width: 820px) {
+        width: 90%;
+      }
+    
+      @media (max-width: 600px) {
+        width: 100%;
+      }
+    `
+
+    return (
+      <AppContainer>
       <Header />
       <Content>
         <List>
@@ -30,38 +62,12 @@ function App() {
       </Content>
       <Footer />
     </AppContainer>
-  );
+    )
+  }
+
+  return (
+    <div className="AppComponent">
+      <App />
+    </div>
+  )
 }
-
-
-const AppContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-`
-
-const Content = styled.div`
-  margin: auto;
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  @media (max-width: 400px) {
-    width: 90%;
-  }
-`
-
-const List = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-
-   @media (max-width: 820px) {
-    width: 90%;
-  }
-
-  @media (max-width: 600px) {
-    width: 100%;
-  }
-`
-export default App;
