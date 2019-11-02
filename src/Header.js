@@ -5,8 +5,8 @@ import useConstant from './utils/useConstant';
 
 export default function Header() {
   const HeaderContainer = useConstant(() => styled.div`
-    text-align: center;
     margin: 2.2rem 0;
+    text-align: center;
   `);
   const Organization = useConstant(() => styled.h2`
     font-size: 1.2rem;
@@ -18,8 +18,8 @@ export default function Header() {
   `);
   const Title = useConstant(() => styled.h1`
     font-family: "Merriweather", serif;
-    text-transform: uppercase;
     font-size: 3.8rem;
+    text-transform: uppercase;
 
     @media (max-width: 550px) {
       font-size: 3rem;

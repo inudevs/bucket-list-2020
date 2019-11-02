@@ -9,13 +9,13 @@ export default function Footer() {
   function ItemList() {
     const List = useConstant(() => styled.ul`
       display: flex;
-      list-style: none;
       justify-content: center;
+      list-style: none;
     `);
     const Item = useConstant(() => styled.a`
+      color: rgba(0, 0, 0, 0.3);
       font-size: 2.2rem;
       margin-left: 0.5rem;
-      color: rgba(0, 0, 0, 0.3);
       transition: color 0.3s linear;
 
       &:first-child {
@@ -44,20 +44,20 @@ export default function Footer() {
   }
 
   const FooterContainer = useConstant(() => styled.footer`
+    align-items: center;
     display: flex;
     flex-direction: column;
-    width: 100%;
     justify-content: center;
-    align-items: center;
     margin: 2.2rem 0;
+    width: 100%;
   `);
   const Description = useConstant(() => styled.span`
-    font-size: 0.9rem;
     color: rgba(0, 0, 0, 0.3);
+    font-size: 0.9rem;
   `);
   const Button = useConstant(() => styled.a`
-    font-size: 0.8rem;
     color: rgba(0, 0, 0, 0.3);
+    font-size: 0.8rem;
     transition: color 0.3s linear;
 
     &:hover,

@@ -22,11 +22,11 @@ export default function App() {
   `);
 
   const Content = useConstant(() => styled.div`
-    margin: auto;
-    width: 80%;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    margin: auto;
+    width: 80%;
 
     @media (max-width: 400px) {
       width: 90%;

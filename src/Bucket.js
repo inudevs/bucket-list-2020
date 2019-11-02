@@ -21,14 +21,14 @@ export default function Bucket({ name, desc, tags }) {
     font-weight: 300;
   `);
   const Name = useConstant(() => styled.h1`
-    margin-bottom: 0.3rem;
-    font-weight: 700;
     font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
     word-break: keep-all;
   `);
   const Description = useConstant(() => styled.p`
-    font-weight: 400;
     font-size: 0.8rem;
+    font-weight: 400;
     word-break: keep-all;
   `);
 
