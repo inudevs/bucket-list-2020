@@ -1,22 +1,22 @@
 import React from 'react';
-import styled from 'styled-components'; 
+import styled from 'styled-components';
 
-export default function Header(){
-  const HeaderContainer = styled.div`
+import useConstant from './utils/useConstant';
+
+export default function Header() {
+  const HeaderContainer = useConstant(() => styled.div`
     text-align: center;
     margin: 2.2rem 0;
-  `
-
-  const Organization = styled.h2`
+  `);
+  const Organization = useConstant(() => styled.h2`
     font-size: 1.2rem;
     font-weight: 700;
 
     @media (max-width: 550px){
       font-size: 1.1rem;
     }
-  `
-
-  const Title = styled.h1`
+  `);
+  const Title = useConstant(() => styled.h1`
     font-family: 'Merriweather', serif;
     text-transform: uppercase;
     font-size: 3.8rem;
@@ -28,11 +28,10 @@ export default function Header(){
     @media (max-width: 400px){
       font-size: 2.2rem;
     }
-  `
-
-  const Description = styled.p`
+  `);
+  const Description = useConstant(() => styled.p`
     margin-top: 0.3rem;
-  `
+  `);
 
   return (
     <HeaderContainer>
@@ -40,5 +39,5 @@ export default function Header(){
       <Title>Bucket List</Title>
       <Description>2020년, 이런 동아리를 만들어 나갈 거예요!</Description>
     </HeaderContainer>
-  )
+  );
 }
