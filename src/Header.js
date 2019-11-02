@@ -12,20 +12,20 @@ export default function Header() {
     font-size: 1.2rem;
     font-weight: 700;
 
-    @media (max-width: 550px){
+    @media (max-width: 550px) {
       font-size: 1.1rem;
     }
   `);
   const Title = useConstant(() => styled.h1`
-    font-family: 'Merriweather', serif;
+    font-family: "Merriweather", serif;
     text-transform: uppercase;
     font-size: 3.8rem;
 
-    @media (max-width: 550px){
+    @media (max-width: 550px) {
       font-size: 3rem;
     }
 
-    @media (max-width: 400px){
+    @media (max-width: 400px) {
       font-size: 2.2rem;
     }
   `);

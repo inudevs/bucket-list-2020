@@ -14,7 +14,8 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "deploy": "gh-pages -d build",
-    "lint:js": "eslint . --ext .js --fix"
+    "lint:js": "eslint . --ext .js --fix",
+    "lint:css": "stylelint \"**/*.js\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -38,6 +39,12 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^1.7.0",
-    "gh-pages": "^2.1.1"
+    "gh-pages": "^2.1.1",
+    "stylelint": "^11.1.1",
+    "stylelint-config-airbnb": "^0.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-order": "^3.1.1",
+    "stylelint-processor-styled-components": "^1.8.0",
+    "stylelint-scss": "^3.12.0"
   }
 }
