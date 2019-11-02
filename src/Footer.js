@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Footer = () => (
-  <Foot>
+  <FooterContainer>
     <List>
       <Item
         href="https://github.com/inudevs"
@@ -36,11 +36,11 @@ const Footer = () => (
     >
       버킷리스트 추가하기
     </Add>
-  </Foot>
+  </FooterContainer>
 )
 
 
-const Foot = styled.footer`
+const FooterContainer = styled.footer`
   display: flex;
   flex-direction: column;
   width: 100%;

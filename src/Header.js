@@ -2,15 +2,15 @@ import React from 'react';
 import styled from 'styled-components'; 
 
 const Header = () => (
-  <Head>
+  <HeaderContainer>
     <Org>INU: 이루고, 누리다.</Org>
     <Title>Bucket List</Title>
     <Desc>2020년, 이런 동아리를 만들어 나갈 거예요!</Desc>
-  </Head>
+  </HeaderContainer>
 )
 
 
-const Head = styled.div`
+const HeaderContainer = styled.div`
   text-align: center;
   margin: 2.2rem 0;
 `
