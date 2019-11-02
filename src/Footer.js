@@ -1,46 +1,89 @@
 import React from 'react';
-import './styles/Footer.scss';
+import styled from 'styled-components';
 
 const Footer = () => (
-  <footer className="footer">
-    <ul className="footer-list">
-      <a
-        className="footer-item"
+  <Foot>
+    <List>
+      <Item
         href="https://github.com/inudevs"
         target="_blank"
         rel="noopener noreferrer"
       >
         <i class="fab fa-github"></i>
-      </a>
-      <a
-        className="footer-item"
+      </Item>
+      <Item
         href="http://facebook.com/inudevs"
         target="_blank"
         rel="noopener noreferrer"
       >
         <i class="fab fa-facebook"></i>
-      </a>
-      <a
-        className="footer-item"
+      </Item>
+      <Item
         href="http://messenger.com/t/inudevs"
         target="_blank"
         rel="noopener noreferrer"
       >
         <i class="fab fa-facebook-messenger"></i>
-      </a>
-    </ul>
-    <span className="footer-desc">
+      </Item>
+    </List>
+    <Desc>
       INU와 함께 새로운 도전을 해 나갈 팀원을 찾습니다.
-    </span>
-    <a
-      className="footer-add"
+    </Desc>
+    <Add
       href="https://forms.gle/ko8fkx1gXGfFuXh77"
       target="_blank"
       rel="noopener noreferrer"
     >
       버킷리스트 추가하기
-    </a>
-  </footer>
+    </Add>
+  </Foot>
 )
 
+
+const Foot = styled.footer`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 2.2rem 0;
+`
+
+const List = styled.ul`
+  display: flex;
+  list-style: none;
+  justify-content: center;
+`
+
+const Item = styled.a`
+  font-size: 2.2rem;
+  margin-left: 0.5rem;
+  color: rgba(0, 0, 0, 0.3);
+  transition: color 0.3s linear;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:hover,
+  &:focus {
+    color: black;
+  }
+`
+
+const Desc = styled.span`
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.3);
+`
+
+const Add = styled.a`
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.3);
+  transition: color 0.3s linear;
+
+  &:hover,
+  &:focus {
+     color: black;
+  }
+`
 export default Footer;
