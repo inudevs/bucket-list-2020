@@ -51,34 +51,27 @@ export default function Footer() {
     margin: 2.2rem 0;
     width: 100%;
   `);
-  const Description = useConstant(() => styled.span`
+  const Description = useConstant(() => styled.a`
     color: rgba(0, 0, 0, 0.3);
     font-size: 0.9rem;
-  `);
-  const Button = useConstant(() => styled.a`
-    color: rgba(0, 0, 0, 0.3);
-    font-size: 0.8rem;
     transition: color 0.3s linear;
 
     &:hover,
     &:focus {
-      color: black;
+      color: rgba(0, 0, 0, 0.5);
     }
   `);
 
   return (
     <FooterContainer>
       <ItemList />
-      <Description>
-        INU와 함께 새로운 도전을 해 나갈 팀원을 찾습니다.
-      </Description>
-      <Button
-        href="https://forms.gle/ko8fkx1gXGfFuXh77"
+      <Description
+        href="https://inudevs.com"
         target="_blank"
         rel="noopener noreferrer"
       >
-        버킷리스트 추가하기
-      </Button>
+        INU와 함께 새로운 도전을 해 나갈 팀원을 찾습니다.
+      </Description>
     </FooterContainer>
   );
 }

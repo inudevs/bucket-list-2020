@@ -37,6 +37,7 @@ export default function App() {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-bottom: 2rem;
 
     @media (max-width: 820px) {
       width: 90%;
