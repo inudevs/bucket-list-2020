@@ -12,7 +12,7 @@ import useConstant from './utils/useConstant';
 
 const onClickButton = () => {
   // eslint-disable-next-line no-alert
-  window.alert('준비중입니다.');
+  window.open('https://circle.dimigo.in/');
 };
 
 export default function App() {
