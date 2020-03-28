@@ -3,17 +3,26 @@ import styled from 'styled-components';
 
 import useConstant from './utils/useConstant';
 
+import achievedImage from './assets/achieved.png';
+
 interface BucketProps {
-  name?: string,
-  desc?: string,
-  tags?: Array<string>
+  name?: string;
+  desc?: string;
+  tags?: Array<string>;
+  achieved?: boolean;
 };
 
-const Bucket: React.SFC<BucketProps> = ({ name = '', desc = '', tags = [] }) => {
+const Bucket: React.SFC<BucketProps> = ({
+  name = '',
+  desc = '',
+  tags = [],
+  achieved = false,
+}) => {
   const BucketContainer = useConstant(() => styled.div`
     flex: 0 0 30%;
     margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
+    position: relative;
 
     @media (max-width: 560px) {
       flex: 0 0 100%;
@@ -37,6 +46,17 @@ const Bucket: React.SFC<BucketProps> = ({ name = '', desc = '', tags = [] }) => 
     font-weight: 400;
     word-break: keep-all;
   `);
+  const AchievedBadge = useConstant(() => styled.img`
+    width: 108px;
+    height: 108px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    filter: opacity(0.7);
+    z-index: -1;
+    user-select: none;
+    -webkit-user-drag: none;
+  `);
 
   return (
     <BucketContainer>
@@ -47,6 +67,9 @@ const Bucket: React.SFC<BucketProps> = ({ name = '', desc = '', tags = [] }) => 
       </TagList>
       <Name>{name}</Name>
       <Description>{desc}</Description>
+      {achieved && <AchievedBadge
+        src={achievedImage}
+      />}
     </BucketContainer>
   );
 }

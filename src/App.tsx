@@ -52,11 +52,12 @@ export default function App() {
       <Header />
       <Content>
         <List>
-          {bucketData.map(({ name, desc, tags }) => (
+          {bucketData.map(({ name, desc, tags, achieved = false }) => (
             <Bucket
               name={name}
               desc={desc}
               tags={tags}
+              achieved={achieved}
             />
           ))}
         </List>

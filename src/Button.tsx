@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import useConstant from './utils/useConstant';
 
 interface ButtonProps {
-  children: ReactNode,
-  onClick?: () => void,
+  children: ReactNode;
+  onClick?: () => void;
 };
 
 const Button: React.SFC<ButtonProps> = ({ children, onClick = () => {} }) => {
